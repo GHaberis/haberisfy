@@ -1,6 +1,6 @@
 ## Change Log
 
-### 1.0.0-alpha.7 (2019/08/01 16:01 +00:00)
+### 1.0.0-alpha.8 (2019/08/01 16:03 +00:00)
 - [#3](https://github.com/ghaberis/haberisfy/pull/3) remove exclamation (@GHaberis)
 
 ### v1.0.0-alpha.3 (2019/08/01 15:06 +00:00)
