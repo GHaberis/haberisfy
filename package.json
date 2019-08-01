@@ -9,11 +9,11 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "yarn build",
-    "prepublishOnly" : "yarn test && yarn lint",
-    "preversion" : "yarn lint",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
     "version": "yarn format && yarn generate-changelog && git add CHANGELOG.md && git add -A src",
-    "postversion" : "git push && git push --tags",
+    "postversion": "git push && git push --tags",
     "generate-changelog": "github-changes -n ${npm_package_version} --only-pulls --use-commit-body"
   },
   "repository": {
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/GHaberis/haberisfy#readme",
   "devDependencies": {
     "@types/jest": "^24.0.15",
+    "github-changes": "^1.1.2",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
@@ -37,6 +38,9 @@
   "files": [
     "lib/**/*"
   ],
-  "keywords": ["Hello", "Greeter"],
+  "keywords": [
+    "Hello",
+    "Greeter"
+  ],
   "author": "George Haberis"
 }
