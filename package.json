@@ -1,6 +1,6 @@
 {
   "name": "haberisfy",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "A nice greeter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,9 +12,9 @@
     "prepare": "yarn build",
     "prepublishOnly": "yarn test && yarn lint",
     "preversion": "yarn lint",
-    "version": "yarn format && yarn generate-changelog && git add CHANGELOG.md && git add -A src",
-    "postversion": "git push && git push --tags",
-    "generate-changelog": "github-changes -o ghaberis -r haberisfy -n ${npm_package_version} -a --only-pulls --use-commit-body"
+    "version": "yarn format && yarn generate-changelog && git add CHANGELOG.md && git add -A src && git add package.json",
+    "generate-changelog": "github-changes -o ghaberis -r haberisfy -n ${npm_package_version} -a --only-pulls --use-commit-body",
+    "postversion": "git commit -m 'bump version to ${npm_package_version}' && git tag ${npm_package_version} && git push && git push --tags"
   },
   "repository": {
     "type": "git",
