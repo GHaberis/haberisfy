@@ -1,1 +1,1 @@
-export const Greeter = (name: string) => `Hello ${name} Haberis`;
+export const Greeter = (name: string) => `Hello ${name} Haberis!!`;
