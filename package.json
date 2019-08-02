@@ -1,20 +1,21 @@
 {
   "name": "haberisfy",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "description": "A nice greeter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "echo": "echo 'test'",
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "yarn build",
-    "prepublishOnly": "yarn test && yarn lint",
-    "preversion": "yarn lint",
-    "version": "yarn format && yarn generate-changelog && git add CHANGELOG.md && git add -A src && git add package.json",
-    "generate-changelog": "github-changes -o ghaberis -r haberisfy -n ${npm_package_version} -a --only-pulls --use-commit-body",
-    "postversion": "git push && git push --tags"
+    "prepare": "echo 'prepare --->' && yarn build",
+    "prepublishOnly": "echo 'prepublishOnly --->' && yarn test && yarn lint",
+    "preversion": "echo 'preversion --->' && yarn lint",
+    "version": "echo 'version --->' && yarn format && yarn generate-changelog && git add CHANGELOG.md && git add -A src && git add package.json",
+    "generate-changelog": "echo 'generate-changelog --->' && github-changes -o ghaberis -r haberisfy -n ${npm_package_version} -a --only-pulls --use-commit-body",
+    "postversion": "echo 'postversion --->' && git push && git push --tags"
   },
   "repository": {
     "type": "git",
